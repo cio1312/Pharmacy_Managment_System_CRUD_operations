@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home_Pharmacy</title>
+	
+	<div class="topnav">
+  <a class="active" href="login_1.html">Logout</a>
+ <a href="#contact">Contact</a>
+ </div> 	
+	
+	<h1 align="center">Welcome To Pharmacy Management System</h1>
+
+	<style>
+		body
+		{
+			background-image: url("back_fix.jpg");
+			background-repeat: no-repeat;
+			 background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+		}
+		.topnav {
+  background-color: transparent;
+  overflow: hidden;
+}
+.topnav a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 7px;
+  border-color: black;
+}
+.topnav a:hover {
+  background-color:#4CAF50;
+  color: black;
+}
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+		 h1 {
+      	color: black;
+      	font-size: 60px;
+         font: verdana;
+         font-family: bold;
+      }
+
+.button {
+
+  background-color:grey ;
+  border:5px solid black;
+  color: black;
+  padding: 100px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 46px;
+  margin: 22px 22px;
+  cursor: pointer;
+
+}
+#btn1{
+	background-image: url("add2_img.gif");
+	background-size: 100px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#btn2{
+	background-image: url("update2_img.gif");
+	background-size: 100px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#btn3{
+	background-image: url("delete2_img.gif");
+	background-size: 100px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#btn4{
+	background-image: url("dis.gif");
+	background-size: 100px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.block:hover {
+  background-color: white;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+	<br><br>
+<div align="center">
+<input type="button" class="button" id="btn1" onClick="location.href='add_5.html'" value='Add Medicine'>
+<input type="button" class="button" id="btn2" onClick="location.href='update_6.html'" value='Update Medicine'>
+<input type="button" class="button" id="btn3" onClick="location.href='delete_7.html'" value='Delete Medicine'>
+<input type="button" class="button" id="btn4" onClick="location.href='display.jsp'" value='Display Medicines'>
+</div>
+</body>
+</html>

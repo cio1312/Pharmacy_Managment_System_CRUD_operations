@@ -1,0 +1,181 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="responsive_style.css" type="text/css" rel="stylesheet"/>
+
+<style type="text/css">
+    body
+{
+ margin:0 auto;
+ padding:0px;
+ text-align:center;
+ width:100%;
+ font-family: "Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+  background-image: url("add_back.jpg");
+   background-repeat: no-repeat;
+       background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+}
+#wrapper
+{
+ margin:0 auto;
+ padding:0px;
+ text-align:center;
+ width:995px;
+}
+#wrapper h1
+{
+ margin-top:50px;
+ font-size:45px;
+ color:#424949;
+}
+#wrapper h1 p
+{
+font-size:18px;
+}
+.form_div
+{
+  margin-top: 150px;
+width:330px;
+margin-left:320px;
+padding:10px;
+background-color:#2ab1ce;
+}
+.form_div .form_label
+{
+margin:15px;
+margin-bottom:30px;
+font-size:25px;
+font-weight:bold;
+color: #4d4d4d;
+text-decoration:underline;
+}
+.form_div input[type="text"],input[type="password"]
+{
+width:230px;
+height:40px;
+border-radius:2px;
+font-size:17px;
+padding-left:5px;
+border:none;
+}
+.form_div input[type="submit"]
+{
+width:230px;
+height:40px;
+border:none;
+border-radius:2px;
+font-size:17px;
+background: #4d4d4d;
+border-bottom:3px solid #616A6B;
+color:white;
+font-weight:bold;
+}
+.form_div input[type="button"]
+{
+width:230px;
+height:40px;
+border:none;
+border-radius:2px;
+font-size:17px;
+background: #4d4d4d;
+border-bottom:3px solid #616A6B;
+color:white;
+font-weight:bold;
+}
+
+@media only screen and (min-width:100px) and (max-width:399px)
+{
+#wrapper
+{
+width:100%;
+}
+#wrapper h1
+{
+font-size:25px;
+}
+.form_div
+{
+width:90%;
+margin-left:5%;
+padding-left:0px;
+padding-right:0px;
+}
+.form_div input[type="text"],input[type="password"]
+{
+width:80%;
+}
+.form_div input[type="submit"]
+{
+width:80%;
+background: #4d4d4d ;
+}
+}
+  
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div class="form_div">
+<p class="form_label">Sign-Up Form</p>
+<form action="servlet2" method="post">
+<p><input type="text" name="username1" placeholder="Create User-ID" required></p>             <!-- check for already existing users  -->
+<p><input type="text" name="firstname" placeholder="First Name"  onkeypress="return onlyAlphabets(event,this);" required></p>
+<p><input type="text" name="email1" placeholder="Enter Email" required></p>
+<p><input type="password" name="password1" placeholder="Enter Password" required></p>   
+<p><input type="password" id="pass" name="password2" placeholder="Re-enter Password" onblur="checkPassword()" required ></p>         
+<p><input type="submit" value='Sign-Up'></p>
+ <p><input type="button" onClick="location.href='login_1.html'" value='Login'></p>
+
+</form>
+</div>
+
+</div>
+
+<script type="text/javascript">
+
+  function checkPassword()
+  {
+      var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+     var res=document.getElementById("pass").value;
+    
+    if(res.match(re))
+    {
+        return true;
+    }
+    else
+    {
+     alert("Enter Password with at least one number, one lowercase and one uppercase letter");  // at least one number, one lowercase and one uppercase letter
+      return false;                        // at least six characters
+    } 
+  } 
+
+     function onlyAlphabets(e, t) {
+            try {
+                if (window.event) {
+                    var charCode = window.event.keyCode;
+                }
+                else if (e) {
+                    var charCode = e.which;
+                }
+                else { return true; }
+                if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+                    return true;
+                else
+                {
+                    alert("Enter only alphabetic values")
+                    return false;
+                }
+            }
+            catch (err) {
+                alert(err.Description);
+            }
+        } 
+
+</script>
+
+
+
+</body>
+</html>

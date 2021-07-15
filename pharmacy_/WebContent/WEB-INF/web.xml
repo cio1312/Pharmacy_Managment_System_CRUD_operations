@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>pharmacy_</display-name>
+  <servlet>
+    <servlet-name>servlet1</servlet-name>
+    <servlet-class>method.servlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet1</servlet-name>
+    <url-pattern>/servlet1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  
+  
+    <servlet-name>servlet2</servlet-name>
+    <servlet-class>method.servlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet2</servlet-name>
+    <url-pattern>/servlet2</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>servlet5</servlet-name>
+    <servlet-class>method.servlet5</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet5</servlet-name>
+    <url-pattern>/servlet5</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>servlet6</servlet-name>
+    <servlet-class>method.servlet6</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet6</servlet-name>
+    <url-pattern>/servlet6</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  
+  
+    <servlet-name>servlet7</servlet-name>
+    <servlet-class>method.servlet7</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet7</servlet-name>
+    <url-pattern>/servlet7</url-pattern>
+  </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<title>Update Medicine</title>
+<link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="style2.css" type="text/css">
+  <div class="topnav">
+  <a class="active" href="login_1.html">Logout</a>
+  <a href="homepage_4.html">Home</a></div>
+</div>
+</head>
+<body>
+<div class="body-content">
+  <div class="module">
+    <h1>Update Medicine Details</h1>
+   <form action="servlet6" method="post">
+      <div class="alert alert-error"></div>
+      <label>Enter Medicine ID: </label> <input type="text" placeholder="Medicine ID" name="medicin_id" required />
+     <label>Enter Medicine Title: </label> <input type="text" onkeypress="return onlyAlphabets(event,this);" placeholder="Title" name="title"  />
+     <label>Enter Medicine Quantity: </label> <input type="text" onkeypress="return isNumberKey(event)" placeholder="Quantity" name="qty"  />
+      <label>Enter Medicine Price: </label> <input type="text" onkeypress="return isNumberKey(event)" placeholder="Price" name="unit_price" />
+     
+      <input type="submit" onclick="checkPassword()" value="Update" name="update" class="btn btn-block btn-primary" />
+    </form>
+  </div>
+</div>
+<SCRIPT language=Javascript>
+    
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+             {
+              alert("Enter only numeric values")
+               return false;
+            }
+         return true;
+      }
+
+      function onlyAlphabets(e, t) {
+            try {
+                if (window.event) {
+                    var charCode = window.event.keyCode;
+                }
+                else if (e) {
+                    var charCode = e.which;
+                }
+                else { return true; }
+                if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+                    return true;
+                else
+                {
+                    alert("Enter only alphabetic values")
+                    return false;
+                }
+            }
+            catch (err) {
+                alert(err.Description);
+            }
+        } 
+   
+   </SCRIPT>
+
+  
+ 
+
+</body>
+</html>
